@@ -1,0 +1,119 @@
+@mixin background-color($args...) {
+    background: linear-gradient($args...);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h2, h3, p {
+    line-height: 1.5rem;
+    width: 100%;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// Weather widget
+.weather-widget {
+    position: relative;
+    justify-self: center;
+    align-items: center;
+    margin: auto 1rem;
+    min-width: 23.438rem;
+    padding: 1rem;
+    background-color: gray;
+    border-radius: 12px;
+    gap: 2rem;
+    overflow: hidden;
+
+    &.glass {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+.current-date {
+    position: absolute;
+    left: 0;
+    margin-inline-start: 1rem;
+    font-size: 0.938rem;
+    max-width: 25%;
+}
+
+.current-weather-container {
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.weather-forecast {
+    gap: 1rem;
+    overflow-y: auto;
+    max-width: 100%;
+    
+    .forecast-item {
+        max-width: 4rem;
+        max-height: 8rem;
+        text-align: center;
+    }
+}
+
+.weather-type-container {
+    justify-items: center;
+}
+
+// Background colors
+.slight-chance {
+    @include background-color(90deg,rgb(0, 140, 247) 0%, rgba(240, 240, 225, 1) 50%, rgba(95, 180, 222, 1) 100%);
+}
+.sunny {
+    @include background-color(90deg,rgba(240, 240, 182, 1) 0%, rgba(242, 239, 70, 1) 50%, rgba(237, 177, 66, 1) 100%);
+}
+.mostly-clear {
+    @include background-color(90deg,rgba(223, 231, 237, 1) 0%, rgba(225, 238, 240, 1) 50%, rgba(180, 219, 240, 1) 100%);
+}
+.mostly-sunny {
+    @include background-color(90deg,rgba(230, 230, 213, 1) 0%, rgba(219, 217, 107, 1) 50%, rgba(237, 177, 66, 1) 100%);
+}
+.partly-cloudy {
+    @include background-color(90deg,rgb(0, 140, 247) 0%, rgba(240, 240, 225, 1) 50%, rgba(95, 180, 222, 1) 100%);
+}
+.mostly-cloudy {
+    @include background-color(90deg,rgb(0, 140, 247) 0%, rgba(240, 240, 225, 1) 50%, rgba(95, 180, 222, 1) 100%);
+}
+.default-bg {
+    @include background-color(90deg,rgb(0, 140, 247) 0%, rgba(240, 240, 225, 1) 50%, rgba(95, 180, 222, 1) 100%);
+}

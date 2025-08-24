@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h2, h3, p {
+  line-height: 1.5rem;
+  width: 100%;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-widget {
+  position: relative;
+  justify-self: center;
+  align-items: center;
+  margin: auto 1rem;
+  min-width: 23.438rem;
+  padding: 1rem;
+  background-color: gray;
+  border-radius: 12px;
+  gap: 2rem;
+  overflow: hidden;
+}
+.weather-widget.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.current-date {
+  position: absolute;
+  left: 0;
+  margin-inline-start: 1rem;
+  font-size: 0.938rem;
+  max-width: 25%;
+}
+
+.current-weather-container {
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.weather-forecast {
+  gap: 1rem;
+  overflow-y: auto;
+  max-width: 100%;
+}
+.weather-forecast .forecast-item {
+  max-width: 4rem;
+  max-height: 8rem;
+  text-align: center;
+}
+
+.weather-type-container {
+  justify-items: center;
+}
+
+.slight-chance {
+  background: linear-gradient(90deg, rgb(0, 140, 247) 0%, rgb(240, 240, 225) 50%, rgb(95, 180, 222) 100%);
+}
+
+.sunny {
+  background: linear-gradient(90deg, rgb(240, 240, 182) 0%, rgb(242, 239, 70) 50%, rgb(237, 177, 66) 100%);
+}
+
+.mostly-clear {
+  background: linear-gradient(90deg, rgb(223, 231, 237) 0%, rgb(225, 238, 240) 50%, rgb(180, 219, 240) 100%);
+}
+
+.mostly-sunny {
+  background: linear-gradient(90deg, rgb(230, 230, 213) 0%, rgb(219, 217, 107) 50%, rgb(237, 177, 66) 100%);
+}
+
+.partly-cloudy {
+  background: linear-gradient(90deg, rgb(0, 140, 247) 0%, rgb(240, 240, 225) 50%, rgb(95, 180, 222) 100%);
+}
+
+.mostly-cloudy {
+  background: linear-gradient(90deg, rgb(0, 140, 247) 0%, rgb(240, 240, 225) 50%, rgb(95, 180, 222) 100%);
+}
+
+.default-bg {
+  background: linear-gradient(90deg, rgb(0, 140, 247) 0%, rgb(240, 240, 225) 50%, rgb(95, 180, 222) 100%);
+}
+
+/*# sourceMappingURL=main.css.map */

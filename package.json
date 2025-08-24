@@ -1,0 +1,12 @@
+{
+  "name": "weather-widget",
+  "version": "1.0.0",
+  "description": "Weather widget to view the current weather data and weather forecast for a city over the next 5-days every 3 hours.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch styles/main.scss styles/main.css --load-path=./styles"
+  },
+  "author": "",
+  "license": "ISC"
+}
